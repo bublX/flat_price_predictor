@@ -13,7 +13,7 @@ import catboost
 model = joblib.load("stacking_best.pkl")
 assert hasattr(model, "predict"), "Загруженный объект не является моделью с методом predict"
 
-# Порядок признаков, на которых обучалась модель (БЕЗ level!)
+# Порядок признаков, на которых обучалась модель
 FEATURE_ORDER = [
     "area", "rooms", "kitchen_area", "levels",
     "floor_ratio", "building_type", "object_type",
